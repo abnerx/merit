@@ -20,7 +20,7 @@ module Merit
     def _merit_delegate_methods_to_sash
       methods = %w(badge_ids badges points add_badge rm_badge
                    add_points subtract_points score_points)
-      methods.each { |method| delegate method, to: :_sash }
+      methods.each { |method| delegate method, to: :_sash, prefix: :merit }
     end
 
     def _merit_active_record_specific_config
